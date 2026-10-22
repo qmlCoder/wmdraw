@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tauri + Vue + Typescript App</title>
+        <style>
+            :root {
+                /* 自定义标题栏高度，JS 侧需要像素值时也从这里读 */
+                --wm-titlebar-height: 32px;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            body {
+                /* 标题栏固定在最顶部，给页面内容让出等高空间，避免遮住工具栏 */
+                padding-top: var(--wm-titlebar-height);
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
